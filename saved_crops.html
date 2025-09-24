@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saved Crops</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <h2>📌 Saved Crops</h2>
+  <ul>
+    {% for crop in crops %}
+      <li><i class="fa-solid fa-leaf"></i> {{ crop }}</li>
+    {% endfor %}
+    {% if not crops %}
+      <p>No crops saved yet.</p>
+    {% endif %}
+  </ul>
+  <a href="{{ url_for('crops') }}">⬅ Back to Crops</a>
+</body>
+</html>
